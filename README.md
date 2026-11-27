@@ -1,5 +1,7 @@
 # ShortLink
 
+[![CI](https://github.com/Krinal-Nakrani/shortlink/actions/workflows/ci.yml/badge.svg)](https://github.com/Krinal-Nakrani/shortlink/actions/workflows/ci.yml)
+
 A mini Bitly built as three small Python (FastAPI) services backed by Redis and PostgreSQL.
 This is the starter project for the **DevOps from Scratch** workshop.
 
