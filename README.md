@@ -54,3 +54,13 @@ Then run the end-to-end check from the project root:
 
 All settings are environment variables with local defaults (see `.env.example`):
 `DATABASE_URL`, `REDIS_URL`, `BASE_URL`, `STREAM_NAME`.
+
+## Run with Docker Compose
+
+```bash
+cp .env.example .env
+docker compose up -d
+./scripts/smoke-test.sh
+```
+
+Stop with `docker compose down` (add `-v` to also delete the data).
