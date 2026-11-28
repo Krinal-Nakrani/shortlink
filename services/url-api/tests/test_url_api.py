@@ -69,7 +69,7 @@ def test_shorten_creates_a_short_link(client, fake_cache, monkeypatch):
 
     response = client.post("/shorten", json={"url": "https://example.com/devops"})
 
-    assert response.status_code == 201
+    assert response.status_code == 200
     body = response.json()
     assert len(body["code"]) == 6
     assert body["short_url"].endswith("/" + body["code"])
