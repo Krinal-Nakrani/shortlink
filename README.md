@@ -66,3 +66,18 @@ docker compose up -d
 ```
 
 Stop with `docker compose down` (add `-v` to also delete the data).
+
+## Container images
+
+Images are built by GitHub Actions and published to GitHub Container Registry.
+
+| Service | Image |
+|---|---|
+| url-api | `ghcr.io/krinal-nakrani/shortlink-url-api` |
+| redirect-service | `ghcr.io/krinal-nakrani/shortlink-redirect-service` |
+| analytics-worker | `ghcr.io/krinal-nakrani/shortlink-analytics-worker` |
+
+Tags: `sha-<commit>` for every push to `main`, `1.0.0` and `1.0` for releases,
+and `latest` for the newest release. Pull an image with:
+
+    docker pull ghcr.io/krinal-nakrani/shortlink-url-api:1.0.0
